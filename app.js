@@ -19,7 +19,7 @@ function btnFlash(btn){
     btn.classList.add('flash');
     setTimeout(function (){
         btn.classList.remove('flash');
-    },1000);
+    },250);
 }
 
 function levelUp(){
@@ -40,6 +40,6 @@ function pressBtns() {
 
 
 let allBtns = document.querySelectorAll(".btn");
-for (btns of allBtns){
-    btns.addEventListener('click',pressBtns);
+for (btn of allBtns){
+    btn.addEventListener('click',pressBtns);
 }
