@@ -15,8 +15,18 @@ document.addEventListener("keypress", function(){
     }
 });
 
+function btnFlash(btn){
+    btn.classList.add('flash');
+    setTimeout(function(){
+        btn.classList.remove();
+    },1000);
+}
+
 function levelUp(){
     level++;
     h2.innerText = `Level ${level}`;
     
+
+    btnFlash();
 }
+
