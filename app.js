@@ -35,7 +35,9 @@ function levelUp(){
 }
 
 function pressBtns() {
-    console.log("button was pressed");
+    console.log(this);
+    let userClickedBtn = this;
+    btnFlash(userClickedBtn);
 }
 
 
