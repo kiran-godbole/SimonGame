@@ -37,14 +37,23 @@ function levelUp(){
     let randomColor = btns[randomIndex];
     let randomBtns = document.querySelector(`.${randomColor}`);
     
-    console.log(randomColor)
+    // console.log(randomColor)
+    gameSeq.push(randomColor);
+    console.log(gameSeq);
     gameFlash(randomBtns);
+}
+
+function checkAns(){
+    
 }
 
 function pressBtns() {
     console.log(this);
     let userClickedBtn = this;
     userFlash(userClickedBtn);
+
+    userColor = userClickedBtn.getAttribute('id')
+    console.log(userColor);
 }
 
 
