@@ -45,7 +45,7 @@ function levelUp(){
 }
 
 function checkAns(idx){
-    // console.log("curr level", level)
+    
 
     
     if(userSeq[idx] === gameSeq[idx]){
@@ -54,7 +54,11 @@ function checkAns(idx){
         }
         
     }else{
-        h2.innerText = `Game Over! Press any key to start. `;
+        h2.innerHTML = `Game Over! your score was <b>${level}</b> <br> Press any key to start. `;
+        document.querySelector("body").style.backgroundColor = 'red';
+        setTimeout( function(){
+            document.querySelector("body").style.backgroundColor = 'white';
+        }, 150)
         reset();
     }
 }
